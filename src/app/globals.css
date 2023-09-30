@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,14 +14,281 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+/* styles/globals.css */
+/**
+ * @license
+ *
+ * Font Family: Clash Display
+ * Designed by: Indian Type Foundry
+ * URL: https://www.fontshare.com/fonts/clash-display
+ * © 2023 Indian Type Foundry
+ *
+ * Font Styles:
+ * Clash Display Variable(Variable font)
+ * Clash Display Extralight
+ * Clash Display Light
+ * Clash Display Regular
+ * Clash Display Medium
+ * Clash Display Semibold
+ * Clash Display Bold
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0)
+
+*/
+
+@font-face {
+  font-family: 'ClashDisplay-bold';
+  src: url('/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-bold.otf') format('truetype');
+  font-weight: 700;
+       font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'Unica One';
+  src: url('/UnicaOne-Regular.ttf') format('truetype');
+       font-style: normal;
 }
+
+@font-face {
+  font-family: 'MadeTommy';
+  src: url('/MADE TOMMY ExtraBold Outline_PERSONAL USE.otf') format('opentype');
+       font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
+
+
+body {
+  background-color: #150E28;
+  background-image: url('/Purple-Lens-Flare4-PNG.png');
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: repeat-x;
+  font-family: 'Montserrat', sans-serif;
+  z-index: -1;
+}
+
+.questions{
+  font-family: 'MadeTommy', sans-serif;
+  animation: shake 0.5s infinite;
+
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(5px) rotate(5deg);
+  }
+}
+
+.star{
+  animation: twinkling 1s linear infinite;
+}
+
+@keyframes twinkling {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+
+/* Create a semi-transparent overlay */
+.mobile{
+  background-color: #150E28;
+  z-index: 10;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ClashDisplay-bold', sans-serif;
+}
+
+.numberment {
+  font-family: 'Unica One', cursive;
+}
+
+
+.noo{
+  background-color: #903AFF, #D434FE, #FF26B9, #FE34B9;
+}
+
+.card{
+  background-color: #d634fe15;
+}
+
+.card1st{
+  background-color: #8f3aff15;
+}
+
+/* Apply a half bottom border to the top divs in each row */
+.logo-container:not(.half-border-right) {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem; /* Add padding to maintain height */
+}
+
+/* Style for the bottom divs in the second row */
+.logo-container.half-border-right {
+  border-right: 2px solid #000;
+  padding: 0.5rem; /* Add padding to maintain height */
+}
+
+/* Style for the bottom divs in the second row */
+.logo-container.half-border-xx {
+  border-right: 2px solid #000;
+  padding: 2.0rem; /* Add padding to maintain height */
+}
+
+.privacy{
+  background-color: #d634fe07;
+}
+
+.privacy2{
+  background-image: url('/Vectortrust.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 249px;
+  
+}
+
+@media (min-width: 1024px) {
+  .privacy2 {
+    background-size: 450px;
+  }
+}
+
+.foot{
+  background-image: url('/Rectanglefooter.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* CSS for sliding in the hero image */
+.image-slide {
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* CSS for fading in the overlay image */
+.image-fade-in {
+  animation: fadeIn 2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CSS for spinning and pulsing the image */
+.image-spin-pulse {
+  animation: pulse 2s infinite alternate ease-in-out;
+  animation: rotateimg 2s linear infinite alternate, pulse 2s ease-in-out alternate; 
+
+  transform-origin: center; /* Make sure the rotation happens around the center of the image. */
+}
+
+@keyframes rotateimg {
+  from {
+    transform: rotate(0deg);
+  }
+    to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* CSS for fading in the element */
+
+  @keyframes fadein {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.fade-in-element {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadin 1s ease-in-out; /* Adjust the duration and easing as needed */
+
+}
+
+.visible {
+  opacity: 1; /* Make the element fully visible */
+  transition: opacity 1s ease-in-out; /* Add a smooth fade-in transition */
+}
+
+.border-half {
+  border-top: 4px;
+  border-top-width: 50%; /* Set the right border to 50% of the div's width */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D434FE;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
