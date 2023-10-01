@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RegistrationSuccess from '../../components/registrationSuccess'; // Import the RegistrationSuccess component
 import Image from 'next/image';
-import { fetchCategories, registerUser } from '/api/api'; // Import API functions
+import { fetchCategories, registerUser } from '../../Api/api'; // Import API functions
 import Navbar from 'components/navbar.js';
 
 

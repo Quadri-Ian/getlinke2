@@ -2,24 +2,23 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Import the necessary FontAwesome icons
-import bars from '../public/vector.svg'
 import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [menuIcon, setMenuIcon] = useState(bars); // Initialize the menu icon to the "burger" icon
+  const [menuIcon, setMenuIcon] = useState(faBars); // Initialize the menu icon to the "burger" icon
 
   // Function to toggle the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     // Toggle the menu icon between "burger" and "times"
-    setMenuIcon(isOpen ? bars : faTimes);
+    setMenuIcon(isOpen ? faBars : faTimes);
   };
 
   // Function to close the mobile menu
   const closeMenu = () => {
     setIsOpen(false);
-    setMenuIcon(bars); // Set the menu icon back to "burger" when the menu is closed
+    setMenuIcon(faBars); // Set the menu icon back to "burger" when the menu is closed
   };
 
   return (
