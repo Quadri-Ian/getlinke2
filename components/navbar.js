@@ -22,10 +22,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className=''>
+    <div className='items-center'>
       {/* Navbar (Mobile) */}
-      <div className=''>
-        <nav className="p-4 px-12 text-white border-b-2 lg:hidden">
+      <div className='items-center'>
+        <nav className="items-center px-12 text-white border-b-2 lg:hidden">
           <div className="flex justify-between items-center">
             <Link href='/'>
               <div className="text-md md:text-1xl font-bold">get<span className='text-techpurple'>linked</span></div>
@@ -64,22 +64,22 @@ const Navbar = () => {
             <div className="space-y-8 w-full p-8 bg-[#150E28]">
               <ul className='space-y-4 bg-[#150E28]'>
                 <li>
-                  <Link className="text-lg " onClick={closeMenu} href="#timeline">
+                  <Link className="text-lg " onClick={closeMenu} href="/#timeline">
                     Timeline 
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="#overview">
+                  <Link className="text-lg" onClick={closeMenu} href="/#overview">
                     Overview
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="#faqs">
+                  <Link className="text-lg" onClick={closeMenu} href="/#faqs">
                     FAQs
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="/contact">
+                  <Link className="text-lg" onClick={closeMenu} href="/#contact">
                     Contact
                   </Link>
                 </li>
@@ -106,22 +106,22 @@ const Navbar = () => {
             <div >
               <ul className="flex justify-between space-x-4"> 
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="#timeline">
+                  <Link className="text-lg" onClick={closeMenu} href="/#timeline">
                     Timeline
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="#overview">
+                  <Link className="text-lg" onClick={closeMenu} href="/#overview">
                     Overview
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="#faqs">
+                  <Link className="text-lg" onClick={closeMenu} href="/#faqs">
                     FAQs
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-lg" onClick={closeMenu} href="/contact">
+                  <Link className="text-lg" onClick={closeMenu} href="/#contact">
                     Contact
                   </Link>
                 </li>

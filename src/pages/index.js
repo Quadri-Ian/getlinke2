@@ -151,12 +151,24 @@ export default function Home() {
       />
       </div>
 
-      <div className='z-50 border-b-[1px] border-gray-600 fixed top-0 w-full bg-opacity-75 backdrop-blur-lg'>
-            <Navbar />
+      <div className=" absolute bottom-[25%] left-[15%]">
+      <Image
+        src="/pstar.png"
+        alt="underline"
+        width={40}
+        height={40}
+        className="w-4 fixed z-0 star"
+      />
+      </div>
+
+      <div className='z-50 py-3 md:py-6 h-12 md:h-20 lg:py-0 border-b-[1px] border-gray-600 fixed top-0 w-full bg-opacity-75 backdrop-blur-lg'>
+      <div className='w-full h-full my-auto items-center'>
+            <Navbar />     
+      </div>
       </div>
       {/* Hero div (Mobile) */}
-      <div className="z-20 relative hero text-white pt-6 pb-0 border-b-[1px] border-gray-600 mt-20 ">
-  <div className="flex flex-col items-center text-center md:text-right text-sm px-8 italic md:items-end md:text-2xl lg:text-4xl relative ">
+      <div className="z-20 relative hero h-[calc(100%-48px)] md:h-[calc(100%-80px)] text-white pt-6 pb-0 border-b-[1px] border-gray-600 mt-12 md:mt-20">
+  <div className="flex flex-col items-center text-center md:text-right text-sm px-8 italic md:items-end md:text-2xl lg:text-4xl relative">
     Igniting a revolution in HR innovation
     <Image
       src="/Vector4.svg"
@@ -180,7 +192,7 @@ export default function Home() {
               className="inline -mt-10 -ml-8 md:-mt-[73px] md:-ml-[52px] lg:-ml-[63px] lg:-mt-[80px] xl:-ml-20 xl:-mt-[110px] w-4 md:w-8 xl:w-12 "
             />
           </div>
-          <div className="text-3xl md:text-5xl lg:text-6xl flex-nowrap whitespace-nowrap font-bold lg:w-full xl:text-[80px]">
+          <div className=" text-3xl md:text-5xl lg:text-6xl flex-nowrap whitespace-nowrap font-bold lg:w-full xl:text-[80px]">
             Hackathon <span className="text-techpurple">1.0</span>
             <Image
               src="/chain.png"
@@ -199,12 +211,10 @@ export default function Home() {
           </div>
         </div>
         <p className="text-white text-sm md:text-lg lg:text-1xl xl:text-2xl md:px-20 lg:px-0">Participate in getlinked Tech Hackathon 2023, stand a chance to win a Big prize</p>
-        <div>
-          <button 
-          className="px-12 rounded-md py-3 bg-gradient-to-r from-techpink to-techpurple text-white" 
-          href="/register">
-            Register
-          </button>
+        <div className='mt-8'>
+                <Link className="px-12 rounded-md py-3 bg-gradient-to-r from-techpink to-techpurple text-white"  href="/register">
+                  Register
+                </Link>       
         </div>
       </div>
             <div className="numberment text-3xl lg:text-7xl text-white">
@@ -214,7 +224,14 @@ export default function Home() {
             </div>
           </div>
 
-    <div className=" text-white flex w-full">
+    <div className="relative text-white flex w-full">
+    <Image
+          src="/metrix.png"
+          alt="Hero Image"
+          width={828}
+          height={715}
+          className="absolute top-0 left-0 object-fit w-full h-full"
+        />
       <div className=" relative image-slide">
         <Image
           src="/Hackathonguy.png"
@@ -392,14 +409,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=' flex-1 xl:px-24'>
-          <div className='z-0 relative md:ml-10 w-full '>
-            <h1 className='questions absolute -top-10 text-7xl lg:text-[150px] text-[#A866FD]'>?</h1>
-            <h1 className='questions absolute  -top-16 left-20 lg:-top-24 lg:left-24  text-8xl lg:text-[200px] text-techpurple'>?</h1>
-            <h1 className='questions absolute  left-40 -top-10 lg:-top-10 lg:left-64 text-7xl lg:text-[150px] text-[#A866FD]'>?</h1>
+        <div className=' flex-1 xl:px-24 '>
+          <div className='z-0 relative md:ml-10 w-full ml-8'>
+            <h1 className='questions absolute -top-10 -left-6 text-6xl lg:text-[150px] text-[#A866FD]'>?</h1>
+            <h1 className='questions absolute  -top-16 left-16 lg:-top-24 lg:left-24  text-7xl lg:text-[200px] text-techpurple'>?</h1>
+            <h1 className='questions absolute  left-40 -top-10 lg:-top-10 lg:left-64 text-6xl lg:text-[150px] text-[#A866FD]'>?</h1>
 
           </div>
-          <div className='mt-2 relative'>
+          <div className='relative'>
             <Image
             src='/thinking.png'
             alt='big idea'
@@ -745,13 +762,13 @@ export default function Home() {
       </div>        
       </div>
 
-      <div ref={ref7} className={`relative fade-in-element ${fadeInClass7} py-12 border-b-[1px] border-gray-600 backdrop-blur-lg`}>
-        <div className='text-white p-6 space-y-4'>
+      <div ref={ref7} className={`relative lg:px-24 fade-in-element ${fadeInClass7} py-12 border-b-[1px] border-gray-600 backdrop-blur-lg`}>
+        <div className='text-white p-6 space-y-4 lg:text-center'>
         <h5 className=''>Partners and Sponsors</h5>
-        <p>Getlinked Hackathon 1.0 is honored to have the following major 
+        <p className='lg:px-24'> Getlinked Hackathon 1.0 is honored to have the following major 
               companies as its partners and sponsors</p>
         </div>
-        <div className='px-6 md:w-1/2 lg:w-1/3 mx-auto pt-4'> 
+        <div className='px-6 py-8 md:w-1/2  mx-auto pt-4'> 
     <LogosAndLines />
 
         </div>

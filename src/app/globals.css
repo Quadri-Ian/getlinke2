@@ -270,9 +270,21 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity 1s ease-in-out; /* Add a smooth fade-in transition */
 }
 
-.border-half {
-  border-top: 4px;
-  border-top-width: 50%; /* Set the right border to 50% of the div's width */
+
+/* .xborder {
+  border-width: 0 4px 0 4px;
+  border-style: solid;
+  border-width: 20%;
+}
+
+.topborder {
+  border-width: 4px 0 0 0;
+  border-style: solid;
+} */
+
+.topborder2 {
+  border-width: 4px 4px 0 4px;
+  border-style: solid;
 }
 
 ::-webkit-scrollbar {
@@ -291,4 +303,125 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+#containerr {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(2, 1fr); /* Two rows */
+  column-gap: 15px; /* Adjust the gap as needed */
+  row-gap: 5px;
+}
+
+
+.boxx {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.borderx {
+  border-width: 0 3px 0 3px;
+  padding: 0 3px 0 3px;
+  border-color: #D434FE;
+
+}
+
+.bordery {
+  border-width: 3px 0 0 0;
+  padding: 3px 0 0 0;
+  border-color: #D434FE;
+}
+.borderyy {
+  padding: 3px 6px 0 6px;
+}
+
+/* .boxx:nth-child(5):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #D434FE;
+  height: 3px;
+  width: 91%;
+} */
+
+.boxx:nth-child(5):before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #D434FE;
+  height: 90%;
+  width: 3px;
+}
+
+.boxx:nth-child(5):after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #D434FE;
+  width: 3px;
+  height: 90%;
+}
+
+/* .boxx:nth-child(2):before {
+  content: '';
+  position: absolute;
+  left: -0;
+  top: 3%;
+  background-color: #D434FE;
+  width: 3px;
+  height: 90%;
+}
+
+.boxx:nth-child(2):after {
+  content: '';
+  position: absolute;
+  right: -0;
+  bottom: 3%;
+  background-color: #D434FE;
+  width: 3px;
+  height: 90%;
+}
+
+
+.boxx:nth-child(5):after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+  background-color: #D434FE;
+  width: 3px;
+  height: 90%;
+}
+.boxx:nth-child(4):before {
+  content: '';
+  position: absolute;
+  left: 1%;
+  top: 24;
+  background-color: #D434FE;
+  height: 3px;
+  width: 90%;
+}
+
+
+
+
+.boxx:nth-child(6):before {
+  content: '';
+  position: absolute;
+  right: 1%;
+  top: 0;
+  background-color: #D434FE;
+  height: 3px;
+  width: 91%;
+} */
 

@@ -56,13 +56,15 @@ const Register = () => {
 
   return (
     <div>
-      <div className='border-b-[1px] border-gray-600 fixed top-0 w-full z-10 bg-opacity-75 backdrop-blur-lg'>
-            <Navbar />
+      <div className='z-50 py-3 md:py-6 lg:py-0 h-12 md:h-20 border-b-[1px] border-gray-600 fixed top-0 w-full bg-opacity-75 backdrop-blur-lg'>
+      <div className='w-full h-full my-auto items-center'>
+            <Navbar />     
+      </div>
       </div>
 
     <div className="flex mt-20">
       {/* ... Your existing code ... */}
-      <div className="hidden lg:flex lg:w-1/2 bg-cover bg-center bg-image-url">
+      <div className="hidden lg:flex lg:w-1/2 bg-cover bg-center">
           {/* Replace "bg-image-url" with your image URL */}
           <Image
           src='/3d-graphic.png'
@@ -72,10 +74,8 @@ const Register = () => {
           className='w-full h-full'
           />
         </div>
-        {isRegistrationSuccessful ? (
-        <RegistrationSuccess />
-      ) : (
-        // ... Render the registration form ...
+
+        {/* // ... Render the registration form ... */}
         <div className="w-full lg:w-1/2 ">
           <div className=" p-8">
             <h2 className="text-techpurple text-3xl font-bold mb-4">Register</h2>
@@ -161,8 +161,8 @@ const Register = () => {
                     Select your category
                   </option>
                   {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name}
+                    <option key={category.id} value={category.id} className='bg-[#150E28] active:bg-techpurple hover:bg-techpurple focus:bg-techpurple'>
+                      {category.name} 
                     </option>
                   ))}
                 </select>
@@ -174,15 +174,15 @@ const Register = () => {
                     <select
                     id="groupSize"
                     name="groupSize"
-                    className="bg-opacity-10 backdrop-blur-sm bg-blue-100 p-2 rounded-sm w-full border-2 text-white"
+                    className="bg-opacity-10  backdrop-blur-sm bg-blue-100 p-2 rounded-sm w-full border-2 text-white"
                     required
                     >
-                    <option value="" disabled selected>
+                    <option className='bg-[#150E28]' value="" disabled selected >
                         Select your group size
                     </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="1" className='bg-[#150E28]  active:bg-techpurple hover:bg-techpurple focus:bg-techpurple'>1</option>
+                    <option value="2" className='bg-[#150E28]  active:bg-techpurple hover:bg-techpurple focus:bg-techpurple'>2</option>
+                    <option value="3" className='bg-[#150E28]  active:bg-techpurple hover:bg-techpurple focus:bg-techpurple'>3</option>
                     {/* Add more group size options here */}
                     </select>
                 </div>
@@ -213,6 +213,11 @@ const Register = () => {
             </form>
           </div>
         </div>
+
+        {isRegistrationSuccessful ? (
+        <RegistrationSuccess />
+      ) : (
+        <div></div>
       )}
 
     </div>      

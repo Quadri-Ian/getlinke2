@@ -15,9 +15,11 @@ library.add(fas, fab);
 function MyApp({ Component, pageProps }) {
   // You can include layout components, providers, or other setup here
   return (
+    <div>
     <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Component {...pageProps} />
+    </Layout>		
+    </div>
   );
 }
 

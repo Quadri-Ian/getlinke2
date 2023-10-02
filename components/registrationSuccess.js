@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const RegistrationSuccess = () => {
   return (
-    <div className="fixed  flex w-full h-full justify-center items-center bg-opacity-10 p-4">
-      <div className="bg-white p-8 rounded-lg text-center text-white flex flex-col items-center border-2">
+    <div className="fixed  flex  w-full h-[calc(100%-48px)] bg-[#150E28] md:h-[calc(100%-80px)] justify-center items-center bg-opacity-75 backdrop-blur-md p-4">
+      <div className=" bg-white p-8 rounded-lg text-center text-white flex flex-col items-center border-2 border-techpurple">
         <Image src="/congratulation.png" width={500} height={500} alt="Success" className="mx-auto mb-4 w-full h-full" />
         <p className="text-2xl font-bold text-techpurple mb-2">Congratulations!</p>
         <p className="text-sm mb-4">Yes, it was easy and you did it!</p>
